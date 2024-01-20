@@ -4,7 +4,7 @@
 compression=true
 
 # Set the encryption password 
-encryption_password="nutcracker"
+encryption_password="my_password"
 
 # VMware VMDK details
 vmdk_path="/path/to/your.vmdk"
