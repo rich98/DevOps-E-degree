@@ -1,3 +1,4 @@
+Password Genertator
 It imports the string and random modules.
 It defines a function generate_password(length) that generates a random password of a given length. Here’s what happens inside this function:
 It creates a string all_characters that contains all ASCII letters (both lowercase and uppercase), digits, and punctuation symbols. This is done by concatenating string.ascii_letters, string.digits, and string.punctuation.
