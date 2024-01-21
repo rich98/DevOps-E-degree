@@ -14,10 +14,10 @@ This script is a backup script for a Linux system. Here's a breakdown of what it
 
 7. **Encryption**: It encrypts the backup folder or tarball using the GPG command (`$gpg_command "$backup_folder"`).
 
-8. **SHA-256 Hash**: It computes the SHA-256 hash of the encrypted backup folder or tarball and saves it to a file (`sha256sum "$backup_folder.gpg" > "$hash_file"`).
+8. **SHA-256 Hash**: It computes the SHA-256 hash of the encrypted tarball and saves it to a file (`sha256sum "$backup_folder.gpg" > "$hash_file"`).
 
 9. **Cleanup**: It removes all files in the backup directory except for the tarball and the log file (`find "$backup_dir" -type f ! -name "$(basename "$backup_folder.gpg")" ! -name "$(basename "$log_file")" -delete`), and it removes the password file after the backup (`rm -f "$password_file"`).
 
 10. **Unmount Backup Folder**: Finally, it unmounts the backup folder (`umount /dev/sda1`).
 
-This script is designed to create a secure, encrypted backup of important system directories, while excluding certain directories and large files. It logs its progress, and it cleans up after itself by removing the password file and any extraneous files in the backup directory. It's a good example of a comprehensive backup script for a Linux system. 😊
+This script is designed to create a secure, encrypted backup of important system directories, while excluding certain directories and large files. It logs its progress, and it cleans up after itself by removing the password file and any extraneous files in the backup directory. It's a good example of a comprehensive backup script for a Linux system. 
