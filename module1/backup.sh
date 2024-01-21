@@ -82,5 +82,6 @@ find "$backup_dir" -type f ! -name "$(basename "$backup_folder.gpg")" ! -name "$
 rm -f "$password_file"
 
 #Umount the folder Its not intended for this drive to be connected during working hours - protect fron ransomeware
+umount -l /dev/sda1
 umount -f /backup
 
