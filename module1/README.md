@@ -32,7 +32,7 @@ Useage
 
 This script is a restore script for a Linux system. Here’s a breakdown of what it does:
 
-1. **Set Decryption Password**: It sets the decryption password that will be used to decrypt the backup files (decryption_password="blackswan").
+1. **Set Decryption Password**: It sets the decryption password that will be used to decrypt the backup files ("decryption_password="blackswan").
 
 2. **GPG Decryption Settings**: It sets up GPG decryption settings with a password file. The password is written to a file (password_file="/usr/local/bin/restore_script/password_file.txt"), and the file permissions are set so that only the owner can read and write to it (chmod 600 "$password_file").
 
