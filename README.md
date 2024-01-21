@@ -18,7 +18,7 @@ This script is a backup script for a Linux system. Here's a breakdown of what it
 
 9. **Cleanup**: It removes all files in the backup directory except for the tarball and the log file (`find "$backup_dir" -type f ! -name "$(basename "$backup_folder.gpg")" ! -name "$(basename "$log_file")" -delete`), and it removes the password file after the backup (`rm -f "$password_file"`).
 
-10. **Unmount Backup Folder**: Finally, it unmounts the backup folder (`umount /dev/sda1`).
+10. **Unmount Backup Folder**: Finally, it unmounts the backup folder (`umount -f /dev/sda1`).
 
 This script is designed to create a secure, encrypted backup of important system directories, while excluding certain directories and large files. It logs its progress, and it cleans up after itself by removing the password file and any extraneous files in the backup directory. It's a good example of a comprehensive backup script for a Linux system. 
 This script is designed to restore a backup of a Linux system that was previously saved and encrypted. Here’s a step-by-step explanation:
