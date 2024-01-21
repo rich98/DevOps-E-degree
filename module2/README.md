@@ -14,3 +14,20 @@ If you want to adjust the length of the password cAN THE VALUE OF  generate_pass
 PassgenCreate10.py
 
 In this code, generate_multiple_passwords is a new function that generates a specified number of passwords, each of a specified length. It uses a list comprehension to call generate_password the specified number of times, and returns a list of the generated passwords. Then, it prints each password in the list. You can adjust the number of passwords and their length as needed.
+
+It also proves that the passwords are being creted randomly
+
+This is the out put when passwords are set to 50
+
+┌──(kali㉿apisec)-[~/Documents/code/Password_gen]
+└─$ python3 passgencreate10.py
+omZ&Lc@RmU(&f-CM1eb^NT:bDqa>wwfUqAh2Ahor0j;/M.{B@7
+]_6H\6wQ_\R{}l^kOzqP(T'McVO]+,RCX;vH|-Re?b*LQy)c`i
+e4KfIn!oequa>nGirpgseh(Vf%)~|E4*ezq^F'/liG5ko9^_{j
+vnl>x`-y7GW>q7+=1i_gwu]SLgo&qmluBY89W|vL{AD>AI*.f=
+VPnI}[&H+:<<6rXlrcbWp_4zo*^*6?a:jBj>gsgjMsj,}WCSy=
+%nX-lI?q[R[(y]H~l_o>lvsG\TQ^].&,S{|6`z>jj9(UDH;@|7
+1OT?Fo$OiXyfg5_2IM0l{tq-;j*3j%Y?PuMJ$IWa>dY$80Zq"R
+)i#5{LlKprk~/C;X=W|"RM~9$ptO;cO#"&a/-)VW4U6La0uvCS
+rNb"sqse!f,50ZmJ))D3EXvfuh4Yyi#/ecCs*83:+M_g_|`frZ
+a#Q>B/@A<w$GX{>Rc'!KqGTsJaF~4=4tTYgQ$p0G#{$x;@C0iM
