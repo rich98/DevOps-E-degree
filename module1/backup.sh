@@ -37,7 +37,7 @@ exclude_dirs=(
 # Maximum file size to exclude (1 GB)
 max_file_size=1G
 
-# Destination directory for the system backup
+# Destination directory for the system backup. Its not intended for this drive to be connected during working hours - protect fron ransomeware
 backup_dir="/backup"
 
 # Log file to store rsync output
@@ -81,6 +81,6 @@ find "$backup_dir" -type f ! -name "$(basename "$backup_folder.gpg")" ! -name "$
 # Remove the password file after backup
 rm -f "$password_file"
 
-#Umount the folder
-umount -f /dev/sda1
+#Umount the folder Its not intended for this drive to be connected during working hours - protect fron ransomeware
+umount -f /backup
 
