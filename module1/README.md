@@ -24,7 +24,7 @@ This script is designed to create a secure, encrypted backup of important system
 This script is designed to restore a backup of a Linux system that was previously saved and encrypted. Here’s a step-by-step explanation:
 
 
-Restoring files
+**Restoring files**
 
 Useage
 
