@@ -45,3 +45,12 @@ Decrypt and Extract Each Backup File: For each backup file in the list, it decry
 Cleanup: After the backup has been restored, it removes the decrypted file and the password file. This is done to maintain the security of the system and to ensure that no unnecessary files are left behind.
 
 This script is designed to decrypt and extract the backup files to a specified directory or their original location. It cleans up after itself by removing the decrypted files and the password file. It’s a good example of a comprehensive restore script for a Linux system. 
+
+Cron Job
+
+See cron.png
+
+30 12 * * Sun: This specifies the schedule of the cron job. It will run at 12:30 PM every Sunday.
+/usr/local/bin/backup_script/backup.sh: This is the command that the cron job will execute. It appears to be a shell script for backing up data.
+So, this cron job will execute the backup.sh script located in /usr/local/bin/backup_script/ every Sunday at 12:30 PM
+
