@@ -82,5 +82,5 @@ find "$backup_dir" -type f ! -name "$(basename "$backup_folder.gpg")" ! -name "$
 rm -f "$password_file"
 
 #Umount the folder
-umount /dev/sda1
+umount -f /dev/sda1
 
