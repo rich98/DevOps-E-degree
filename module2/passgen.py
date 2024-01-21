@@ -7,4 +7,4 @@ def generate_password(length):
     return password
 
 # Generate a 12-character password
-print(generate_password(12))
+print(generate_password(22))
