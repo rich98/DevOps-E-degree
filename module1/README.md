@@ -1,3 +1,5 @@
+DevOPS E-degree Module 1
+
 This script is a backup script for a Linux system. Here's a breakdown of what it does:
 
 1. **Set Variables**: It sets some variables at the beginning, such as whether to compress the backup (`compression=true`), the encryption password (`encryption_password="blackswan"`), and the directories to include and exclude in the backup.
