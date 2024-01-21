@@ -17,10 +17,7 @@ In this code, generate_multiple_passwords is a new function that generates a spe
 
 It also proves that the passwords are being creted randomly
 
-This is the out put when passwords are set to 50
-
-┌──(kali㉿apisec)-[~/Documents/code/Password_gen]
-└─$ python3 passgencreate10.py
+python3 passgencreate10.py
 omZ&Lc@RmU(&f-CM1eb^NT:bDqa>wwfUqAh2Ahor0j;/M.{B@7
 ]_6H\6wQ_\R{}l^kOzqP(T'McVO]+,RCX;vH|-Re?b*LQy)c`i
 e4KfIn!oequa>nGirpgseh(Vf%)~|E4*ezq^F'/liG5ko9^_{j
