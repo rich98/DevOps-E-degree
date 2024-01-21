@@ -21,3 +21,27 @@ This script is a backup script for a Linux system. Here's a breakdown of what it
 10. **Unmount Backup Folder**: Finally, it unmounts the backup folder (`umount /dev/sda1`).
 
 This script is designed to create a secure, encrypted backup of important system directories, while excluding certain directories and large files. It logs its progress, and it cleans up after itself by removing the password file and any extraneous files in the backup directory. It's a good example of a comprehensive backup script for a Linux system. 
+This script is designed to restore a backup of a Linux system that was previously saved and encrypted. Here’s a step-by-step explanation:
+
+
+Restoring files
+
+Useage
+
+./restore.sh /restore
+
+This script is a restore script for a Linux system. Here’s a breakdown of what it does:
+
+Set Decryption Password: It sets the decryption password that will be used to decrypt the backup files (decryption_password="blackswan").
+
+GPG Decryption Settings: It sets up GPG decryption settings with a password file. The password is written to a file (password_file="/usr/local/bin/restore_script/password_file.txt"), and the file permissions are set so that only the owner can read and write to it (chmod 600 "$password_file").
+
+GPG Command for Decryption: It sets up the GPG command for decryption (gpg_command="gpg --decrypt --batch --passphrase-file $password_file").
+
+List of Backup Files: It creates a list of backup files to be restored (backup_files=("/backup/system_backup_*.tar.gz.gpg")).
+
+Decrypt and Extract Each Backup File: For each backup file in the list, it decrypts the file and extracts its contents. If a destination directory is specified when the script is run, it will restore the backup to that location. If no destination is specified, it will restore the backup to its original location (/).
+
+Cleanup: After the backup has been restored, it removes the decrypted file and the password file. This is done to maintain the security of the system and to ensure that no unnecessary files are left behind.
+
+This script is designed to decrypt and extract the backup files to a specified directory or their original location. It cleans up after itself by removing the decrypted files and the password file. It’s a good example of a comprehensive restore script for a Linux system. 😊
