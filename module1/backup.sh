@@ -37,7 +37,7 @@ exclude_dirs=(
 # Maximum file size to exclude (1 GB)
 max_file_size=1G
 
-# Destination directory for the system backup. Its not intended for this drive to be connected during working hours - protect fron ransomeware
+# Destination directory for the system backup. Its not intended for this drive to be connected during working hours - protect from ransomware
 backup_dir="/backup"
 
 # Log file to store rsync output
