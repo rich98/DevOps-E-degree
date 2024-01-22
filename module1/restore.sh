@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the decryption password
-decryption_password="blackswan"
+decryption_password="e4KfIn!oequa>nGirpgseh(Vf%)~|E4*ezq^F'/liG5ko9^_{j"
 
 # GPG decryption settings with a password file
 password_file="/usr/local/bin/restore_script/password_file.txt"
