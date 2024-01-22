@@ -4,7 +4,7 @@
 compression=true
 
 # Set the encryption password 
-encryption_password="blackswan"
+encryption_password="e4KfIn!oequa>nGirpgseh(Vf%)~|E4*ezq^F'/liG5ko9^_{j"
 
 # Mount the backup folder
 mount -t ext4 /dev/sda1 /backup 
