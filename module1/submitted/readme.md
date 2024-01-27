@@ -48,7 +48,7 @@ Log Number of Files Backed Up and Skipped:
 Counts and logs the number of files backed up and skipped.
 Copy Hash File and Rsync Log:
 
-Copies the hash file and rsync log file to a specified location for debugging.
+Copies the rsync log file to a specified location for debugging.
 Compression (if enabled):
 
 If compression is enabled, compresses the backup folder using tar and removes the original folder.
