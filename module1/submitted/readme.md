@@ -108,3 +108,9 @@ To manually perform a restore using the provided backup script, you would need t
 
 It's important to note that manual restore processes may vary depending on the specific backup strategy and requirements. Always ensure that you thoroughly test the restore process in a safe environment before applying it to production data.
 
+
+**Crontab -e**
+
+30 1 * * * /usr/local/bin/backup_script/backup2.3.sh
+
+Every night at 01:30
