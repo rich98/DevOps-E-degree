@@ -67,3 +67,44 @@ Removes the password file used for encryption.
 Unmount the Backup Folder:
 
 Unmounts the backup folder. It's mentioned that the drive shouldn't be connected during working hours to protect from ransomware.
+
+To manually perform a restore using the provided backup script, you would need to reverse the process by decrypting, decompressing (if applicable), and copying the data back to the original locations. Below are the steps for manual restore:
+
+1. **Decrypt the Backup:**
+   - Use the GPG command with the decryption option to decrypt the encrypted backup.
+     ```bash
+     gpg --decrypt --batch --passphrase-file /usr/local/bin/backup_script/password_file.txt "$backup_folder/system_backup_${date_format}.gpg" > "$backup_folder/system_backup_${date_format}.tar.gz"
+     ```
+
+2. **Decompress the Backup (if compression is enabled):**
+   - If compression was enabled during the backup, use the tar command to decompress the backup.
+     ```bash
+     tar -xzf "$backup_folder/system_backup_${date_format}.tar.gz" -C "$backup_folder"
+     ```
+
+3. **Copy the Data Back to Original Locations:**
+   - Copy the data back to their original locations using the rsync command or another appropriate method.
+     ```bash
+     rsync -a "$backup_folder/" /destination/directory/
+     ```
+
+4. **Perform Additional Steps (if applicable):**
+   - Depending on the specific backup settings and requirements, you may need to perform additional steps such as setting file permissions, updating configuration files, etc.
+
+5. **Clean Up (optional):**
+   - Remove the decrypted and decompressed backup files if they are no longer needed.
+     ```bash
+     rm -rf "$backup_folder/system_backup_${date_format}.tar.gz" "$backup_folder"
+     ```
+
+6. **Unmount the Backup Folder (if applicable):**
+   - If the backup folder was mounted during the restore process, unmount it.
+     ```bash
+     umount -f /backup
+     ```
+
+7. **Verify the Restore:**
+   - Verify that the data has been successfully restored to their original locations.
+
+It's important to note that manual restore processes may vary depending on the specific backup strategy and requirements. Always ensure that you thoroughly test the restore process in a safe environment before applying it to production data.
+
