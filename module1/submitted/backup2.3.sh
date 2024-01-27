@@ -93,15 +93,9 @@ logger "Backup completed successfully"  # Send completion message to syslog
 logger "Number of files backed up: $num_files_backed_up"
 logger "Number of files skipped: $num_files_skipped"
 
-# Copy the hash file to /usr/local/bin/backup_scripts
-hash_file="$backup_folder/system_backup_${date_format}-backup_hash.sha256"  # Add this line
-if ! cp "$hash_file" "/usr/local/bin/backup_scripts/"; then
-    echo "Failed to copy hash file" | logger
-    
-fi
 
 # Copy the rsync log file to /usr/local/bin/backup_scripts use for debugging
-if ! cp "$log_file" "/usr/local/bin/backup_scripts/"; then
+if ! cp "$log_file" "/usr/local/bin/backup_script/"; then
     echo "Failed to copy rsync log file" | logger
     
 fi
