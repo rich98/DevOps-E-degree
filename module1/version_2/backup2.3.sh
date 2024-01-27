@@ -97,7 +97,7 @@ logger "Number of files skipped: $num_files_skipped"
 if [ "$compression" = true ]; then
     if ! tar -czf "$backup_folder.tar.gz" -C "$backup_folder" .; then
         echo "Failed to compress backup folder" | logger
-        exit 1
+        
     fi
     rm -rf "$backup_folder"
     backup_folder="$backup_folder.tar.gz"
@@ -106,32 +106,32 @@ fi
 # Encrypt the system backup folder with the specified password
 if ! $gpg_command "$backup_folder"; then
     echo "Failed to encrypt backup folder" | logger
-    exit 1
+
 fi
 
 # Compute SHA-256 hash of the encrypted system backup folder
 hash_file="$backup_folder-backup_hash.sha256"
 if ! sha256sum "$backup_folder.gpg" > "$hash_file"; then
     echo "Failed to compute SHA-256 hash" | logger
-    exit 1
+
 fi
 
 # Copy the hash file to /usr/local/bin/backup_scripts
-if ! cp "$hash_file" "/usr/local/bin/backup_scripts/"; then
+if ! cp "$hash_file" "/usr/local/bin/backup_script/"; then
     echo "Failed to copy hash file" | logger
-    exit 1
+
 fi
 
 # Copy the rsync log file to /usr/local/bin/backup_scripts use for debugging
 if ! cp "$log_file" "/usr/local/bin/backup_scripts/"; then
     echo "Failed to copy rsync log file" | logger
-    exit 1
+
 fi
 
 # Remove all files in the backup directory except for the tarball and the log file
 if ! find "$backup_dir" -type f ! -name "$(basename "$backup_folder.gpg")" ! -name "$(basename "$log_file")" -delete; then
     echo "Failed to clean up backup directory" | logger
-    exit 1
+    
 fi
 
 # Remove the password file after backup
@@ -143,3 +143,4 @@ if ! umount -f /backup; then
     echo "Failed to unmount backup folder" | logger
     exit 1
 fi
+exit 1
