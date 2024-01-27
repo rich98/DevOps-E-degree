@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the decryption password
-decryption_password="e4KfInoequa>nGirpgseh(Vf"
+decryption_password="e4KfInoequanGirpgsehf"
 
 # GPG decryption settings with a password file
 password_file="/usr/local/bin/restore_script/password_file.txt"
