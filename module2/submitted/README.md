@@ -112,5 +112,5 @@ This code provides a simple interactive menu for converting weights between diff
 
 This simple calculator program performs basic arithmetic operations (addition, subtraction, multiplication, and division) based on user input. The script is written in Python and includes functionality to clear the console screen for a more user-friendly interface.
 
-Clearing the Console:
-** This part uses the os module to clear the console screen. It checks the operating system (os.name) and uses 'cls' for Windows and 'clear' for other operating systems.
+**Clearing the Console:**
+This part uses the os module to clear the console screen. It checks the operating system (os.name) and uses 'cls' for Windows and 'clear' for other operating systems.
