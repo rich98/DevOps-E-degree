@@ -33,7 +33,7 @@ The code provides a simple function for generating random passwords of a specifi
 
 # PassgenCreate10_in_green.py Password Genertator
 
-Run the script at the copmmand line.
+Run the script at the copmmand line. see pass_gen_10_green.png
 
 In this code, generate_multiple_passwords is a new function that generates a specified number of passwords, each of a specified length. It uses a list comprehension to call generate_password the specified number of times, and returns a list of the generated passwords. Then, it prints each password in the list. You can adjust the number of passwords and their length as needed.
 
