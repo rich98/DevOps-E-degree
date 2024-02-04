@@ -77,7 +77,7 @@ while True:
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
     print("1: kg to lb\n2: g to oz\n3: lb to kg\n4: oz to g\n5: Quit")
 
-** User Input: **
+**User Input:**
 
 The code attempts to get an integer input from the user representing their choice.
 
