@@ -44,7 +44,7 @@ I have also submitted a example of passwords when set to produce 10 50 character
 
 The code imports the os and sys modules. os provides a way to use operating system-dependent functionality, and sys provides access to some variables used or maintained by the Python interpreter.
 
-Funtions:
+# Funtions:
 
 These are conversion functions for weight units. For example, kg_lb converts kilograms to pounds, g_oz converts grams to ounces, and so on.
 
@@ -57,7 +57,7 @@ def lb_kg(mass):
 def oz_g(mass):
     return mass * 28.3495
 
-Mapping Menu Choices to Functions:
+# Mapping Menu Choices to Functions:
 
 A dictionary menu is created where keys are integers representing menu choices, and values are corresponding conversion functions or the string 'quit' for the exit option.
 menu = {
@@ -68,7 +68,7 @@ menu = {
     5: 'quit'
 }
 
-Menu Loop:
+# Menu Loop:
 
 This creates an infinite loop for displaying the menu. It attempts to clear the console using 'cls' for Windows (os.name == 'nt') and 'clear' for other operating systems.
 
@@ -76,14 +76,14 @@ while True:
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
     print("1: kg to lb\n2: g to oz\n3: lb to kg\n4: oz to g\n5: Quit")
 
-User Input:
+# User Input:
 
 The code attempts to get an integer input from the user representing their choice.
 
 try:
     choice = int(input('Make your choice: '))
 
-Handling User Choice:
+# Handling User Choice:
 
 Checks if the user's choice is a valid menu option. If the choice is 'quit' (5), it prints a goodbye message and breaks out of the loop.
 If the choice is a valid conversion option, it prompts the user to enter a weight, performs the conversion using the selected function, and prints the result.
@@ -99,10 +99,9 @@ if choice in menu:
 else:
     print("Invalid choice!")
 
-Handling Errors:
+# Handling Errors:
 
 Catches a ValueError exception if the user inputs something that cannot be converted to an integer, and prints an error message.
-
 
 except ValueError:
     print("Invalid input!")
