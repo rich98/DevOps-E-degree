@@ -1,6 +1,4 @@
-Password Genertator
-
-# Passgen.py
+# Passgen.py Password Genertator
 
 This code defines a Python function to generate a random password of a specified length using a combination of letters (both uppercase and lowercase), digits, and punctuation characters. Here's a breakdown of the code:
 The string module provides a collection of string constants, and the random module is used to generate random values.
@@ -31,7 +29,7 @@ The script calls the generate_password function with an argument of 22 to genera
 
 The code provides a simple function for generating random passwords of a specified length using a combination of letters, digits, and punctuation characters. The generated password is then printed to the console in this specific case with a length of 22 characters.
 
-# PassgenCreate10_in_green.py
+# PassgenCreate10_in_green.py Password Genertator
 
 In this code, generate_multiple_passwords is a new function that generates a specified number of passwords, each of a specified length. It uses a list comprehension to call generate_password the specified number of times, and returns a list of the generated passwords. Then, it prints each password in the list. You can adjust the number of passwords and their length as needed.
 
@@ -40,7 +38,7 @@ It also proves that the passwords are being creted randomly
 I have also submitted a example of passwords when set to produce 10 50 character passwords. A password from this list was tested online at https://www.security.org/how-secure-is-my-password/
 
 
-# Weight Convertor
+# Weight-0con.py Weight Convertor
 
 The code imports the os and sys modules. os provides a way to use operating system-dependent functionality, and sys provides access to some variables used or maintained by the Python interpreter.
 
@@ -108,7 +106,7 @@ except ValueError:
 
 This code provides a simple interactive menu for converting weights between different units, running in a loop until the user chooses to quit. The os.system line is used to clear the console, and the code handles user input and displays conversion results.
 
-# Calc.py
+# Calc.py Simple calculator 
 
 This simple calculator program performs basic arithmetic operations (addition, subtraction, multiplication, and division) based on user input. The script is written in Python and includes functionality to clear the console screen for a more user-friendly interface.
 
