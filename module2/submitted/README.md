@@ -31,7 +31,7 @@ The script calls the generate_password function with an argument of 22 to genera
 
 The code provides a simple function for generating random passwords of a specified length using a combination of letters, digits, and punctuation characters. The generated password is then printed to the console in this specific case with a length of 22 characters.
 
-# PassgenCreate10.py
+# PassgenCreate10_in_green.py
 
 In this code, generate_multiple_passwords is a new function that generates a specified number of passwords, each of a specified length. It uses a list comprehension to call generate_password the specified number of times, and returns a list of the generated passwords. Then, it prints each password in the list. You can adjust the number of passwords and their length as needed.
 
