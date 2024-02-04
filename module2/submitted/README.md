@@ -145,7 +145,7 @@ This section displays a menu for the user with options for arithmetic operations
 
 Main loop to keep the program running
 while True:
-    # Display the menu for the user
+    Display the menu for the user
     print("Select operation:")
     print("1. Add")
     print("2. Subtract")
