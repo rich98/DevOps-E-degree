@@ -33,11 +33,32 @@ The code provides a simple function for generating random passwords of a specifi
 
 In this code, generate_multiple_passwords is a new function that generates a specified number of passwords, each of a specified length. It uses a list comprehension to call generate_password the specified number of times, and returns a list of the generated passwords. Then, it prints each password in the list. You can adjust the number of passwords and their length as needed.
 
-It also proves that the passwords are being creted randomly
+It also proves that the passwords are being created randomly
 
 I have also submitted a example of passwords when set to produce 10 50 character passwords. A password from this list was tested online at https://www.security.org/how-secure-is-my-password/
 
+python3 passgencreate10.py *set to 50
+omZ&Lc@RmU(&f-CM1eb^NT:bDqa>wwfUqAh2Ahor0j;/M.{B@7
+]_6H\6wQ_\R{}l^kOzqP(T'McVO]+,RCX;vH|-Re?b*LQy)c`i
+e4KfIn!oequa>nGirpgseh(Vf%)~|E4*ezq^F'/liG5ko9^_{j
+vnl>x`-y7GW>q7+=1i_gwu]SLgo&qmluBY89W|vL{AD>AI*.f=
+VPnI}[&H+:<<6rXlrcbWp_4zo*^*6?a:jBj>gsgjMsj,}WCSy=
+%nX-lI?q[R[(y]H~l_o>lvsG\TQ^].&,S{|6`z>jj9(UDH;@|7
+1OT?Fo$OiXyfg5_2IM0l{tq-;j*3j%Y?PuMJ$IWa>dY$80Zq"R
+)i#5{LlKprk~/C;X=W|"RM~9$ptO;cO#"&a/-)VW4U6La0uvCS
+rNb"sqse!f,50ZmJ))D3EXvfuh4Yyi#/ecCs*83:+M_g_|`frZ
+a#Q>B/@A<w$GX{>Rc'!KqGTsJaF~4=4tTYgQ$p0G#{$x;@C0iM
 
+I tested one of these long passwords at 
+https://www.security.org/how-secure-is-my-password/
+
+It would take a computer about
+
+1 sesvigintillion years 
+
+The integer 1000000000000000000000000000000000000000000000000000000000000000000000000000000000 (or 1081, a 1 followed by 81 zeros) is called a Sesvigintillion.
+
+to crack your password
 # Weight-con.py Weight Convertor
 
 The code imports the os and sys modules. os provides a way to use operating system-dependent functionality, and sys provides access to some variables used or maintained by the Python interpreter.
