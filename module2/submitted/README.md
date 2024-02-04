@@ -44,7 +44,7 @@ I have also submitted a example of passwords when set to produce 10 50 character
 
 The code imports the os and sys modules. os provides a way to use operating system-dependent functionality, and sys provides access to some variables used or maintained by the Python interpreter.
 
-** Funtions: **
+**Funtions:**
 
 These are conversion functions for weight units. For example, kg_lb converts kilograms to pounds, g_oz converts grams to ounces, and so on.
 
@@ -57,7 +57,7 @@ def lb_kg(mass):
 def oz_g(mass):
     return mass * 28.3495
 
-** Mapping Menu Choices to Functions: **
+**Mapping Menu Choices to Functions:**
 
 A dictionary menu is created where keys are integers representing menu choices, and values are corresponding conversion functions or the string 'quit' for the exit option.
 menu = {
@@ -68,7 +68,7 @@ menu = {
     5: 'quit'
 }
 
-** Menu Loop: **
+**Menu Loop:**
 
 This creates an infinite loop for displaying the menu. It attempts to clear the console using 'cls' for Windows (os.name == 'nt') and 'clear' for other operating systems.
 
@@ -83,7 +83,7 @@ The code attempts to get an integer input from the user representing their choic
 try:
     choice = int(input('Make your choice: '))
 
-** Handling User Choice: **
+**Handling User Choice:**
 
 Checks if the user's choice is a valid menu option. If the choice is 'quit' (5), it prints a goodbye message and breaks out of the loop.
 If the choice is a valid conversion option, it prompts the user to enter a weight, performs the conversion using the selected function, and prints the result.
@@ -99,7 +99,7 @@ if choice in menu:
 else:
     print("Invalid choice!")
 
-** Handling Errors: **
+**Handling Errors:**
 
 Catches a ValueError exception if the user inputs something that cannot be converted to an integer, and prints an error message.
 
@@ -114,3 +114,69 @@ This simple calculator program performs basic arithmetic operations (addition, s
 
 **Clearing the Console:**
 This part uses the os module to clear the console screen. It checks the operating system (os.name) and uses 'cls' for Windows and 'clear' for other operating systems.
+
+import os
+os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
+
+**Arithmetic Functions:**
+These are functions for performing basic arithmetic operations. The divide function includes a check to prevent division by zero.
+
+Define a function to add two numbers
+def add(x, y):
+    return x + y
+
+Define a function to subtract two numbers
+def subtract(x, y):
+    return x - y
+
+Define a function to multiply two numbers
+def multiply(x, y):
+    return x * y
+
+Define a function to divide two numbers, with a check for division by zero
+def divide(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return 'Error! Division by zero is not allowed.'
+
+**Main Loop and User Interface:**
+This section displays a menu for the user with options for arithmetic operations and an option to exit the program.
+
+Main loop to keep the program running
+while True:
+    # Display the menu for the user
+    print("Select operation:")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+    print("5. Exit")
+
+**User Input and Operation Execution:**
+
+This part takes user input for the choice of operation and performs the selected operation based on the user's input. It also asks the user to press Enter before continuing.
+
+    # Get user choice
+    choice = input("Enter choice (1/2/3/4/5): ")
+
+    # Check if the choice is a valid operation (1 to 4)
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        # Perform the selected operation based on user input
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))
+
+        # Ask the user to press Enter before continuing
+        input("Press Enter to continue...")
+
+
+
