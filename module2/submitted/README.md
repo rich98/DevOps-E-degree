@@ -157,10 +157,10 @@ while True:
 
 This part takes user input for the choice of operation and performs the selected operation based on the user's input. It also asks the user to press Enter before continuing.
 
-    # Get user choice
+Get user choice
     choice = input("Enter choice (1/2/3/4/5): ")
 
-    # Check if the choice is a valid operation (1 to 4)
+Check if the choice is a valid operation (1 to 4)
     if choice in ('1', '2', '3', '4'):
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
@@ -175,7 +175,7 @@ This part takes user input for the choice of operation and performs the selected
         elif choice == '4':
             print(num1, "/", num2, "=", divide(num1, num2))
 
-        # Ask the user to press Enter before continuing
+Ask the user to press Enter before continuing
         input("Press Enter to continue...")
 
 
