@@ -1,5 +1,5 @@
 import os
-   os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
+os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
 # Define a function to add two numbers
 def add(x, y):
     return x + y
