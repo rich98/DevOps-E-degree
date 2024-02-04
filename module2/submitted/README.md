@@ -38,7 +38,7 @@ It also proves that the passwords are being creted randomly
 I have also submitted a example of passwords when set to produce 10 50 character passwords. A password from this list was tested online at https://www.security.org/how-secure-is-my-password/
 
 
-# Weight-0con.py Weight Convertor
+# Weight-con.py Weight Convertor
 
 The code imports the os and sys modules. os provides a way to use operating system-dependent functionality, and sys provides access to some variables used or maintained by the Python interpreter.
 
