@@ -178,5 +178,22 @@ Perform the selected operation based on user input
 Ask the user to press Enter before continuing
         input("Press Enter to continue...")
 
+**Exiting the Program and handlie invalid input:**  
 
+If the user chooses the exit option, the program prints a message and breaks out of the main loop, effectively ending the program.
+If the user enters an invalid choice, the program informs the user that the input is invalid.
 
+Check if the user wants to exit the program
+    elif choice == '5':
+        print("Exiting the program.")
+        break
+    else:
+        print("Invalid Input")
+
+**Clearing the Screen Again:**
+
+After performing the operation or handling invalid input, the script clears the console screen before displaying the menu again.
+
+os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
+
+The script creates a simple console-based calculator with a user-friendly interface and the ability to clear the screen for better interaction.
