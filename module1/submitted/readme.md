@@ -104,10 +104,9 @@ Mount the backup folder
         echo "Failed to mount backup folder" | logger
 ```
 
-
 Unmount the folder. It's not intended for this drive to be connected during working hours - protect from ransomware
 unmount with option -f /devsdx this can cause issues with the file system after unmounting
-```if ! umount -l /backup; then
+```if ! umount -f /backup; then
     echo "Failed to unmount backup folder" | logger
 ```
 
@@ -138,10 +137,6 @@ Run the script:
 ```
 sudo ./backup_script.sh
 ```
-
-
-
-
 **Crontab -e**
 
 30 1 * * * /usr/local/bin/backup_script/backup2.3.sh
