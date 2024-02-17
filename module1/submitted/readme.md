@@ -98,19 +98,18 @@ To manually perform a restore using the provided backup script, you would need t
      ```
 
 6. **MNount \ Unmount the Backup Folder (if applicable):**
-# Mount the backup folder
-if ! grep -qs '/backup ' /proc/mounts; then
+Mount the backup folder
+```if ! grep -qs '/backup ' /proc/mounts; then
     if ! mount -t ext4 /dev/sda1 /backup; then
         echo "Failed to mount backup folder" | logger
-        exit 1
-    fi
-fi
+```
 
-# Unmount the folder. It's not intended for this drive to be connected during working hours - protect from ransomware
-# unmount with option -f /devsdx this can cause issues with the file system after unmounting
-if ! umount -l /backup; then
+
+Unmount the folder. It's not intended for this drive to be connected during working hours - protect from ransomware
+unmount with option -f /devsdx this can cause issues with the file system after unmounting
+```if ! umount -l /backup; then
     echo "Failed to unmount backup folder" | logger
-    
+```
 
 7. **Verify the Restore:**
    - Verify that the data has been successfully restored to their original locations.
