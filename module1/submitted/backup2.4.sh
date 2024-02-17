@@ -1,4 +1,9 @@
 #!/bin/bash
+# Check if the script is run as root
+if [ "$EUID" -ne 0 ]; then
+  echo "Please run as root." | logger
+  exit 1
+fi
 
 # Set the compression flag
 compression=true
@@ -69,7 +74,7 @@ logger "Backup started at $start_time"  # Send start time to syslog
 # Rsync command for each directory, excluding directories
 for dir in "${backup_dirs[@]}"; do
     if ! rsync -a --delete --exclude-from=<(printf '%s\n' "${exclude_dirs[@]}") --max-size=$max_file_size "$dir" "$backup_folder" --log-file="$log_file" --stats 2>&1; then
-        echo "Failed to rsync $dir" | logger
+        echo "Failed to rsync $dir"                                                   
         
     fi
 done
