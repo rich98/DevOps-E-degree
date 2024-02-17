@@ -1,4 +1,4 @@
-Backups2.3.sh Readme
+Backups2.4.sh Readme
 
 This Bash script performs a system backup by compressing, encrypting, and archiving specified directories. Let's break down the script step by step:
 
