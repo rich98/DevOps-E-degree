@@ -138,7 +138,7 @@ Run the script:
 sudo ./backup_script.sh
 ```
 **Crontab -e**
-
-30 1 * * * /usr/local/bin/backup_script/backup2.3.sh
+Replace X.X with version number
+30 1 * * * /usr/local/bin/backup_script/backupX.X.sh
 
 Every night at 01:30
