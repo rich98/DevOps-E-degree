@@ -117,6 +117,31 @@ unmount with option -f /devsdx this can cause issues with the file system after 
 It's important to note that manual restore processes may vary depending on the specific backup strategy and requirements. Always ensure that you thoroughly test the restore process in a safe environment before applying it to production data.
 
 
+This is a bash script for performing system backups on a Linux machine. The script is designed to be run as root, ensuring it has the necessary permissions to access and copy system files. It includes features such as directory exclusion, file size filtering, optional compression, encryption using GPG, and logging for easy monitoring.
+
+**Prerequisites**
+The script must be run as the root user.
+The backup folder should be mounted at /backup (adjustable).
+GPG (GNU Privacy Guard) is required for encryption.
+
+**clone repository**
+Clone this repository to your local machine:
+
+```git clone https://github.com/yourusername/backup-script.git
+cd backup-script
+```
+Make the script executable:
+```
+chmod +x backup_script.sh
+```
+Run the script:
+```
+sudo ./backup_script.sh
+```
+
+
+
+
 **Crontab -e**
 
 30 1 * * * /usr/local/bin/backup_script/backup2.3.sh
