@@ -133,8 +133,7 @@ fi
 rm -f "$password_file"
 
 # Unmount the folder. It's not intended for this drive to be connected during working hours - protect from ransomware
-# umount -l /dev/sda1
-if ! umount -f /backup; then
+if ! umount -l /backup; then
     echo "Failed to unmount backup folder" | logger
     
 fi
