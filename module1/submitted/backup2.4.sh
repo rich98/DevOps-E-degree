@@ -140,8 +140,8 @@ fi
 rm -f "$password_file"
 
 # Unmount the folder. It's not intended for this drive to be connected during working hours - protect from ransomware
-# unmount with option -f /devsdx this can cause issues with the file system after unmounting
-if ! umount -l /backup; then
+# unmount with option -l /devsdx this can cause issues with the file system after unmounting
+if ! umount -f /backup; then
     echo "Failed to unmount backup folder" | logger
     
 fi
