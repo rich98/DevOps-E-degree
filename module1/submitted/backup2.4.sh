@@ -130,10 +130,14 @@ if ! sha256sum "$backup_folder.gpg" > "$hash_file"; then
    
 fi
 
-# Remove all files in the backup directory except for the tarball and the log file
-if ! find "$backup_dir" -type f ! -name "$(basename "$backup_folder.gpg")" ! -name "$(basename "$log_file")" -delete; then
+# clean up the backup directory by deleting all files
+# except for the .gpg files and the log file.
+
+# Find all files in the backup directory that are not .gpg files or the log file
+# and delete them. If the cleanup fails, log an error message.
+
+if ! find "$backup_dir" -type f ! -name "*.gpg" ! -name "$(basename "$log_file")" -delete; then
     echo "Failed to clean up backup directory" | logger
-    
 fi
 
 # Remove the password file after backup
