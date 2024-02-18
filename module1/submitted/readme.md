@@ -93,8 +93,9 @@ To manually perform a restore using the provided backup script, you would need t
 
 5. **Clean Up (optional):**
    - Remove the decrypted and decompressed backup files if they are no longer needed.
-     ```bash
-     rm -rf "$backup_folder/system_backup_${date_format}.tar.gz" "$backup_folder"
+     ```
+   if ! find "$backup_dir" -type f ! -name "*.gpg" ! -name "$(basename "$log_file")" -delete; then
+    echo "Failed to clean up backup directory" | logger
      ```
 
 6. **MNount \ Unmount the Backup Folder (if applicable):**
