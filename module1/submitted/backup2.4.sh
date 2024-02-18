@@ -13,7 +13,7 @@ encryption_password="ee4KfInoequanGirpgsehVf"
 
 # Mount the backup folder
 if ! grep -qs '/backup ' /proc/mounts; then
-    if ! mount -t ext4 /dev/sda1 /backup; then
+    if ! mount -t ext4 /dev/sdb1 /backup; then
         echo "Failed to mount backup folder" | logger
         exit 1
     fi
