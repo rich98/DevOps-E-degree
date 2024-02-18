@@ -11,7 +11,7 @@ compression=true
 # Set the encryption password 
 encryption_password="ee4KfInoequanGirpgsehVf"
 
-# Mount the backup folder
+# Mount the backup folder check lsblk and edit line 16 with your configuration
 if ! grep -qs '/backup ' /proc/mounts; then
     if ! mount -t ext4 /dev/sdb1 /backup; then
         echo "Failed to mount backup folder" | logger
