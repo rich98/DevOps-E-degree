@@ -48,7 +48,7 @@ exclude_dirs=(
 max_file_size=1G
 
 # Destination directory for the system backup. Its not intended for this drive to be connected during working hours - protect from ransomware
-backup_dir="/backup"
+backup_dir="/backup/bkmp"
 
 # Date format for backup folder and log files
 date_format=$(date +"%Y%m%d_%H%M%S")
