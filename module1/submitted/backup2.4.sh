@@ -12,8 +12,8 @@ compression=true
 encryption_password="ee4KfInoequanGirpgsehVf"
 
 # Mount the backup folder check lsblk and edit line 16 with your configuration
-if ! grep -qs '/backup ' /proc/mounts; then
-    if ! mount -t ext4 /dev/sdb1 /backup; then
+if ! grep -qs '/backup/bkmp ' /proc/mounts; then
+    if ! mount -t ext4 /dev/sdb1 /backup/bkmp; then
         echo "Failed to mount backup folder" | logger
         exit 1
     fi
@@ -145,7 +145,7 @@ rm -f "$password_file"
 
 # Unmount the folder. It's not intended for this drive to be connected during working hours - protect from ransomware
 # unmount with option -l /devsdx this can cause issues with the file system after unmounting
-if ! umount -f /backup; then
+if ! umount -f /backup/bkmp; then
     echo "Failed to unmount backup folder" | logger
     
 fi
