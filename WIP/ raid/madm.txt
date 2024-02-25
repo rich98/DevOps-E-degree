@@ -1,0 +1,16 @@
+Creating a RAID 0 array with mdadm on Ubuntu involves the following steps:
+
+Install mdadm: If you haven’t already, install mdadm using the command sudo apt install mdadm1.
+Prepare your disks: You will need at least two raw storage devices available on your server2.
+Create the RAID 0 array: The RAID 0 array works by breaking up data into chunks and striping it across the available disks2. This means that each disk contains a portion of the data and that multiple disks will be referenced when retrieving information2. Use the mdadm utility to create your RAID 0 array. Here is an example command:
+sudo mdadm --create --verbose /dev/md0 --level=0 --raid-devices=2 /dev/sda /dev/sdb
+
+In this command, /dev/md0 is the name of the new RAID array, --level=0 specifies RAID 0, --raid-devices=2 specifies the number of devices in the array, and /dev/sda /dev/sdb are the devices to include in the array341.
+
+Verify the RAID array: After creating the RAID array, you can verify its status with the following command:
+cat /proc/mdstat
+
+Manage the RAID array: After creating the RAID array, you can use mdadm to manage it5.
+Please note that this is a high-level overview. For detailed instructions, you can refer to the guide on how to create RAID arrays with mdadm on Ubuntu25. Remember to backup any important data before proceeding, as setting up a RAID can erase existing data on your disks.
+
+Also, keep in mind that software RAID uses some of your system’s CPU resources, which could impact performance. However, with modern CPUs, this overhead is usually negligible2.
