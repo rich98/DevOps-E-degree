@@ -8,7 +8,7 @@ Make sure the backup destination is properly mounted.
 Usage
 Run as Root:sudo backup2.5.sh
 
-# Customization:
+# Customization: Mount points
 Make sure you use the fisk uuid and not the sda or sdb name as these can swap around on reboot. you must update
 this line as per your configuartion.
 Mounting by ID is a reliable way to ensure that the correct device is mounted, even if the device names (/dev/sd*) change. This is particularly useful in systems where the device names can change between reboots.
@@ -31,35 +31,38 @@ Remember to replace your-uuid-here and /mount/point with the actual UUID of your
 You can also use the UUID in the /etc/fstab file to automatically mount partitions at boot. Here’s an example of an /etc/fstab entry:
 
 UUID=your-uuid-here /mount/point ext4 defaults 0 0
-Adjust the backup_dirs array to include/exclude specific directories.
-Modify the exclude_dirs array to exclude specific directories.
-Set the compression flag to true or false as per your preference.
-Change the encryption_password to a strong passphrase.
 
-# Restore Instructions:
+# Customization: Directories to include in the system backup
 
-Decrypt the backup file using the command:
-'''
-gpg --decrypt --output decrypted_backup_folder.tar.gz --batch --passphrase-file <path_to_password_file> <encrypted_backup_folder.gpg>
-Extract the decrypted backup file:
+```bash
+backup_dirs=(
+    #"/etc"           # for system-wide configuration files.
+    "/home"          # for user data and configuration.
+    #"/var" 
+    #"/root"          # for the root user's home directory.
+    #"/usr/local/bin" 
+    #"/srv" 
+    #"/opt"           # Third-party apps
+    
+    # Add other directories you want to include
+)
 
-tar -xzf decrypted_backup_folder.tar.gz
+# Directories to exclude from the backup
 
-# Logs:
+exclude_dirs=(
+    #"/var/lib/docker"
+    "/tmp"           # Exclude temporary directories
+    "/var/tmp"       # Exclude temporary directories
+)
 
-Detailed logs are available in the backup folder (rsync_<timestamp>.log).
-Skipped files are logged in skipped_files_<timestamp>.log.
-Cleanup:
+```
 
-The script automatically cleans up the backup directory, leaving only .gpg files and log files.
-Unmounting Backup Folder:
+# Maximum file size to exclude (1 GB)
 
-The script unmounts the backup folder after completion. Ensure the drive is not connected during working hours for security.
-Important Notes
-Protect the encryption password and the backup files; they are critical for restoring data.
-Regularly review and test the backup and restore process to ensure reliability.
-Disclaimer
-This script is provided as-is without any warranties. Use it at your own risk and ensure its compatibility with your system and backup requirements.
+max_file_size=1G
 
-Author: Rich98
-Version: 2.4
+Used to set the maxium size of the file that can be backed up - adjust as you like
+
+# Other changes you can do.
+Back folder mount point
+Output type and location for password \ logfiles 
