@@ -14,7 +14,7 @@ encryption_password="ee4KfInoequanGirpgsehVf"
 # Mount the backup folder check lsblk and edit line 16 with your configuration do not use sda or sdb these names may interchange 
 # use uuid of the disk then it doesn't matter how the disk identified using sda or adb
 if ! grep -qs '/backup/bkmp ' /proc/mounts; then
-    if ! udo mount UUID=0a92f4f4-cbe7-4c65-bdf7-59b7f976b0b7 /backup/bkmp; then
+    if ! udo mount UUID=<your uuid> /backup/bkmp; then
         echo "Failed to mount backup folder" | logger
         exit 1
     fi
