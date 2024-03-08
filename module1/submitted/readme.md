@@ -1,23 +1,22 @@
 This script is designed for creating system backups with options for compression, encryption, and customizable backup directories. The backup includes specified system directories, excluding certain ones, and provides options for compression and encryption to enhance security. The script uses rsync for efficient file synchronization and provides detailed logs for tracking the backup process.
 
-Prerequisites
+# Prerequisites
 
 The script should be run with root privileges (sudo or as root user).
 Ensure the required tools (rsync, gpg, tar, logger) are installed.
 Make sure the backup destination is properly mounted.
 Usage
-Run as Root:
+Run as Root:sudo backup2.5.sh
 
-
-sudo backup2.5.sh
-Customization:
+# Customization:
 Make sure you use the fisk uuid and not the sda or sdb name as these can swap around on reboot. you must update
 this line as per your configuartion.
 Adjust the backup_dirs array to include/exclude specific directories.
 Modify the exclude_dirs array to exclude specific directories.
 Set the compression flag to true or false as per your preference.
 Change the encryption_password to a strong passphrase.
-Restore Instructions:
+
+# Restore Instructions:
 
 Decrypt the backup file using the command:
 '''
@@ -26,7 +25,7 @@ Extract the decrypted backup file:
 
 tar -xzf decrypted_backup_folder.tar.gz
 
-Logs:
+# Logs:
 
 Detailed logs are available in the backup folder (rsync_<timestamp>.log).
 Skipped files are logged in skipped_files_<timestamp>.log.
