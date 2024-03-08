@@ -9,8 +9,10 @@ Usage
 Run as Root:
 
 
-sudo backup2.4.sh
+sudo backup2.5.sh
 Customization:
+Make sure you use the fisk uuid and not the sda or sdb name as these can swap around on reboot. you must update
+this line as per your configuartion.
 Adjust the backup_dirs array to include/exclude specific directories.
 Modify the exclude_dirs array to exclude specific directories.
 Set the compression flag to true or false as per your preference.
