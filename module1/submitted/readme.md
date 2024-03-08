@@ -11,6 +11,26 @@ Run as Root:sudo backup2.5.sh
 # Customization:
 Make sure you use the fisk uuid and not the sda or sdb name as these can swap around on reboot. you must update
 this line as per your configuartion.
+Mounting by ID is a reliable way to ensure that the correct device is mounted, even if the device names (/dev/sd*) change. This is particularly useful in systems where the device names can change between reboots.
+
+## Mount a partition using its UUID (Universally Unique Identifier):
+
+First, you need to find the UUID of the partition. You can do this by running the following command in the terminal:
+
+sudo blkid
+
+This command will display the UUIDs for all of your partitions.
+
+Once you have the UUID, you can use it to mount the partition. Here’s an example:
+sudo mount UUID=your-uuid-here /mount/point
+
+Replace your-uuid-here with the UUID you got from the blkid command, and /mount/point with the directory where you want to mount the partition1.
+
+Remember to replace your-uuid-here and /mount/point with the actual UUID of your partition and the actual directory where you want to mount it.
+
+You can also use the UUID in the /etc/fstab file to automatically mount partitions at boot. Here’s an example of an /etc/fstab entry:
+
+UUID=your-uuid-here /mount/point ext4 defaults 0 0
 Adjust the backup_dirs array to include/exclude specific directories.
 Modify the exclude_dirs array to exclude specific directories.
 Set the compression flag to true or false as per your preference.
