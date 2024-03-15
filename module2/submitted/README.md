@@ -45,6 +45,29 @@ I have also submitted a example of passwords when set to produce 10 50 character
 
 This Python code generates random passwords and saves them to a text file. It uses the tkinter library to create a graphical user interface (GUI) with two input fields. One is for the desired password length, and the other is for the number of passwords to generate. When the user clicks the “Generate Passwords” button, the code generates the specified number of passwords and displays them in a message box. It also saves the passwords to a text file named “genpass2.txt” in the current working directory.
 
+# passgen3words.zip
+
+The theory of using three random words for passwords is a strategy recommended by the National Cyber Security Centre (NCSC) for creating strong, memorable passwords¹³. Here's why it works:
+
+1. **Memorability**: Our brains are better at recalling information that forms a narrative or has contextual meaning². The 'Three Random Words' method aligns with this understanding by creating a password structure that is more natural for our brains to encode and retrieve².
+
+2. **Visualization**: When users create passwords using the 'Three Random Words' strategy, they are more likely to visualize the words as images, forming a mental picture². This imagery makes the password more memorable².
+
+3. **Cognitive Load**: Traditional strong passwords, with their complexity and lack of inherent meaning, place a high cognitive load on users². The 'Three Random Words' method reduces this load, making the passwords easier to remember².
+
+4. **Security**: Passwords generated from three random words help users to create unique passwords that are strong enough for many purposes³. They are more effective than complex combinations because they are less predictable and harder for cybercriminals to guess¹³.
+
+5. **Usability**: This method is also good for those who aren’t aware of password managers, or are reluctant to use them³.
+
+For instance, a password like "SunsetDragonTeacup" evokes more vivid mental imagery than a random string like "Sd93!7&Z"². It's easier to remember and still provides a high level of security. However, it's important to note that this method may not be necessary or suitable for all organizations³.
+
+Source: Conversation with Bing, 15/03/2024
+(1) . https://bing.com/search?q=theory+of+3+random+words+for+passwords.
+(2) NCSC Sticks by 'Three Random Words' Strategy for Passwords. https://www.infosecurity-magazine.com/news/ncsc-three-random-words-passwords/.
+(3) The Psychology of Passwords: A Deep Dive into the NCSC's Three Random .... https://www.wrecltd.co.uk/blog/the-psychology-of-passwords-a-deep-dive-into-the-ncscs-three-random-words-strategy/.
+(4) Passwords: why you should use three random word passphrases. https://blog.tecala.co.uk/passwords-why-you-should-use-three-random-word-passphrases/.
+(5) Three random words - NCSC. https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/three-random-words.
+(6) undefined. https://www.ncsc.gov.uk/pdfs/news/ncsc-lifts-lid-on-three-random-words-password-logic.pdf.
 # Weight-con.py Weight Convertor
 
 The code imports the os and sys modules. os provides a way to use operating system-dependent functionality, and sys provides access to some variables used or maintained by the Python interpreter.
