@@ -47,8 +47,9 @@ This Python code generates random passwords and saves them to a text file. It us
 
 # passgen3words.zip
 
-The theory of using three random words for passwords is a strategy recommended by the National Cyber Security Centre (NCSC) for creating strong, memorable passwords¹³. Here's why it works:
+You will need to update the path so the tool can find the word file.
 
+The theory of using three random words for passwords is a strategy recommended by the National Cyber Security Centre (NCSC) for creating strong, memorable passwords¹³. Here's why it works:
 1. **Memorability**: Our brains are better at recalling information that forms a narrative or has contextual meaning². The 'Three Random Words' method aligns with this understanding by creating a password structure that is more natural for our brains to encode and retrieve².
 
 2. **Visualization**: When users create passwords using the 'Three Random Words' strategy, they are more likely to visualize the words as images, forming a mental picture². This imagery makes the password more memorable².
