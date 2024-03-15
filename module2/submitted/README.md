@@ -41,6 +41,10 @@ It also proves that the passwords are being created randomly
 
 I have also submitted a example of passwords when set to produce 10 50 character passwords. A password from this list was tested online at https://www.security.org/how-secure-is-my-password/
 
+# New graphical version passgen2b.pyw
+
+This Python code generates random passwords and saves them to a text file. It uses the tkinter library to create a graphical user interface (GUI) with two input fields. One is for the desired password length, and the other is for the number of passwords to generate. When the user clicks the “Generate Passwords” button, the code generates the specified number of passwords and displays them in a message box. It also saves the passwords to a text file named “genpass2.txt” in the current working directory.
+
 # Weight-con.py Weight Convertor
 
 The code imports the os and sys modules. os provides a way to use operating system-dependent functionality, and sys provides access to some variables used or maintained by the Python interpreter.
